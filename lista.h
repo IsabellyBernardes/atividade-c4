@@ -8,8 +8,8 @@ using namespace std;
 template <class T>
 class Lista {
 private:
-    T* items;         // Array de itens
-    int capacidade;   // Capacidade máxima da lista
+    T* items;         // Esse é o array de itens
+    int capacidade;   // Diz a capacidade máxima da lista
     int tamanhoAtual; // Número de itens atualmente na lista
 
 public:
@@ -23,7 +23,7 @@ public:
         delete[] items; // Destruição do array
     }
 
-    // Adiciona um item ao final da lista
+    // Adiciona um item ao final da lista (estilo )
     void adiciona(const T& item) {
         if (tamanhoAtual >= capacidade) {
             throw runtime_error("Lista cheia"); // Lança exceção se capacidade esgotada

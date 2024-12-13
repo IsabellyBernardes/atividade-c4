@@ -3,7 +3,7 @@
 using namespace std;
 
 template <class T>
-class Fila {
+class Fila { //usa o padrão FIFO
 private:
     T* items; // Array de itens
     int capacidade; // Capacidade máxima da fila
@@ -36,6 +36,8 @@ public:
         if (vazia()) { throw runtime_error("Fila vazia");
         }
         T item = items[inicio];
+        //ele utiliza a ideia de resto da divisão
+        //o resto deve ser zero para funcionar
         inicio = (inicio + 1) % capacidade; // Incrementa inicio de forma circular
         tamanhoAtual--;
         return item;
