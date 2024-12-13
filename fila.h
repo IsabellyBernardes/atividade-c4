@@ -1,6 +1,7 @@
 #ifndef FILA_H
 #define FILA_H
 using namespace std;
+//deixa mais livre o atendimento para novas funções como se fosse um atendimento de restaurante
 
 template <class T>
 class Fila { //usa o padrão FIFO
@@ -28,6 +29,7 @@ public:
           throw runtime_error("Fila cheia"); // Lança exceção se a fila estiver cheia
         }
         fim = (fim + 1) % capacidade; // Incrementa fim de forma circular
+        //caso dê zero o resto da divisão, faz o fim voltar para zero, para ser o final da capacidade
         items[fim] = item;
         tamanhoAtual++;
     }
@@ -44,7 +46,7 @@ public:
     }
 
     int cheia() {
-        return tamanhoAtual == capacidade;
+        return tamanhoAtual == capacidade;//para fazer o teste de fila cheia, meio que força o erro
     }
 
     int vazia() {

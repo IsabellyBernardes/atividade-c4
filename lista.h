@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include <stdexcept>
-using namespace std;
+using namespace std;//pode adicionar em qualquer lugar, porque se utiliza de indices
+//não usa FIFO e nem LIFO
 
 template <class T>
 class Lista {
 private:
-    T* items;         // Esse é o array de itens
-    int capacidade;   // Diz a capacidade máxima da lista
+    T* items;// Esse é o array de itens
+    int capacidade;// Diz a capacidade máxima da lista
     int tamanhoAtual; // Número de itens atualmente na lista
 
 public:

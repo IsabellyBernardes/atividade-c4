@@ -35,7 +35,7 @@ int mainFila() {
 
 	try {
 		cerr << "Testando enfileira() [overflow]: ";
-		fila.enfileira(MAX + 1);
+		fila.enfileira(MAX + 1); //pega o máximo, se passar então deu erro
 		cerr << "FALHOU!" << endl;
 		exit(1);
 	} catch (std::runtime_error & ex) {
